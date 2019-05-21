@@ -15,7 +15,7 @@ weatherForm.addEventListener('submit', (e) => {
             message1.textContent = data.error;
         } else {
             message1.textContent = 'Location:' + data.location;
-            message2.textContent = `It is ${data.forecast.summary} today. The temperature is ${data.forecast.temperature} outside and ${data.forecast.precipProbability} chance of precipitation`
+            message2.textContent = `${data.forecast.summary} today. The temperature is ${data.forecast.temperature} outside and ${parseInt(data.forecast.precipProbability * 100)}% chance of precipitation. The humidity will be ${parseInt(data.forecast.humidity * 100)}%.`
         }
     });
 }); 
